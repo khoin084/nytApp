@@ -1,0 +1,79 @@
+<!--
+*Developer:Khoi Nguyen
+*Date: 3/3/2017
+*UCSD Code Bootcamp: Homework #6
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New York Times Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!--Link after boostrap so that it does not overwrite my styles.-->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!--Linking google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+  
+  
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1><span class="glyphicon glyphicon-book"></span>
+        New York Times Search 
+      </h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-body well">
+        <h4>Search Parameters</h4>
+        
+      </div>
+      <form>
+          <div class="form-group">
+            <label for="search">Search:</label>
+            <input type="text" class="form-control" id="search" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="recs">Number of records to retreive:</label>
+            <select class="form-control" id="num-records">
+              <option>1</option>
+              <option>5</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="startYr">Start Year (Optional):</label>
+            <input type="text" class="form-control" id="startYr" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="endYr">End Year (Optional):</label>
+            <input type="text" class="form-control" id="endYr" placeholder="">
+          </div>
+          <button type="button" class="btn btn-default btn-success btn-lg" id="search-btn">Search</button>
+          <button type="button" class="btn btn-default btn-warning btn-lg" id="clear">Clear</button>
+        </form>
+    </div>
+  </div>
+  <div class="container">
+      <!-- Results Panel -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Top Articles</h3>
+        </div>
+        <div class="panel-body" id="well-section">
+        </div>
+      </div>
+    </div>  
+</body>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  <!--Linking javascript-->
+  <script type="text/javascript" src="assets/javascript/logic.js"></script>
+
+</html>
